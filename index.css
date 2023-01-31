@@ -1,0 +1,33 @@
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#calculadora{
+    width: 500px;
+    background-color: gray;
+    padding: 5px;
+    border: 4px groove black;
+}
+
+#screen{
+    width: 99%;
+    height: 40px;
+    text-align: end;
+    font-size: 40px;
+}
+
+#buttons{
+}
+
+.button {
+    width: 25%;
+    color: aliceblue;
+    text-align: center;
+    background-color: rgb(0, 72, 134);
+    height: 60px;
+}
+
+table{
+    width: 100%;
+}
