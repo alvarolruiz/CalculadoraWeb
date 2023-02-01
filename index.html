@@ -14,39 +14,92 @@
     <!-- 
         Necesito que al pulsar los botones mediante js se escriba el digito o signo que sea pulsado-->
     <div id="calculadora">
-        <input id="screen" type="number" step=".01" readonly="true" value="0" />
+        <label id="screen">0</label>
         <table id="buttons">
             <tbody>
                 <tr>
-                    <td id="(" class="button" onclick="hola()">(</td>
-                    <td id=")" class="button">)</td>
-                    <td id="%" class="button">%</td>
-                    <td id="CE" class="button">CE</td>
+                    <td>
+                        <input type="button" class="buttonDel" onclick="tOperacion('C')" value="C">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonDel" onclick="tOperacion('CE')" value="CE">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonSign" onclick="tOperacion('√')" value="√">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonSign" onclick="tOperacion('%')" value="%">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonSign" onclick="tOperacion('x')" value="x">
+                    </td>
                 </tr>
                 <tr>
-                    <td id="7" class="button">7</td>
-                    <td id="8" class="button">8</td>
-                    <td id="9" class="button">9</td>
-                    <td id="/" class="button">/</td>
+                    <td>
+                        <input id="memory" type="button"  onclick="tOperacion('M')" value="M">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonNum" onclick="tNum(7)" value="7">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonNum" onclick="tNum(8)" value="8">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonNum" onclick="tNum(9)" value="9">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonSign" onclick="tOperacion('/')" value="/">
+                    </td>
                 </tr>
                 <tr>
-                    <td id="4" class="button">4</td>
-                    <td id="5" class="button">5</td>
-                    <td id="6" class="button">6</td>
-                    <td id="x" class="button">x</td>
+                    <td>
+                        <input type="button" class="buttonSign" onclick="buttonSign('RM')" value="RM">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonNum" onclick="tNum(4)" value="4">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonNum" onclick="tNum(5)" value="5">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonNum" onclick="tNum(6)" value="6">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonSign" onclick="tOperacion('-')" value="-">
+                    </td>
                 </tr>
                 <tr>
-                    <td id="1" class="button">1</td>
-                    <td id="2" class="button">2</td>
-                    <td id="3" class="button">3</td>
-                    <td id="-" class="button">-</td>
+                    <td>
+                        <input type="button" class="buttonSign" onclick="tOperacion('MC')" value="MC">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonNum" onclick="tNum(1)" value="1">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonNum" onclick="tNum(2)" value="2">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonNum" onclick="tNum(3)" value="3">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonSign" onclick="tOperacion('+')" value="+">
+                    </td>
                 </tr>
                 <tr>
-                    <td id="0" class="button">0</td>
-                    <td id="." class="button">.</td>
-                    <td id="=" class="button">=</td>
-                    <td id="+" class="button">+</td>
+                    <td>
+                        <input type="button" class="buttonSign" onclick="tOperacion('±')" value="±">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonNum" onclick="tNum(0)" value="0">
+                    </td>
+                    <td>
+                        <input type="button" class="buttonNum" onclick="tDec()" value=".">
+                    </td>
+                    <td colspan="2">
+                        <input type="button" class="buttonEqual" onclick="tOperacion('=')" value="=">
+                    </td>
                 </tr>
+
             </tbody>
         </table>
     </div>
